@@ -1,0 +1,55 @@
+/* style.css */
+
+@keyframes zoomAndMove {
+    0% {
+        transform: scale(100);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateX(10%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLogo {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(50);
+        opacity: 1;
+    }
+}
+
+/* Estilos para o contêiner das imagens */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos para o logo */
+.logo {
+    max-width: 25%;
+    max-height: 50%;
+    animation: zoomAndMove 1s ease-in-out 0s forwards;
+}
+
+/* Estilos para o nome */
+.nome {
+    max-width: 50%;
+    max-height: 50%;
+    opacity: 0;
+    animation: slideInFromLogo 1s ease-in-out 0s forwards; /* Atraso definido como 0s */
+}
+
+body {
+    margin: 0;
+    background-color: #1cd5b3;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imagens/LOGO.png" type="image/x-icon">
+    <title>ROLÊ É MASSA</title>
+    <script>
+        function redirectToNextPage() {
+            window.location.href = "page2.html";
+        }
+
+        window.addEventListener("load", () => {
+            const nomeElement = document.querySelector(".nome");
+            nomeElement.addEventListener("animationend", () => {
+                redirectToNextPage();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <img class="logo" src="./img/LOGO.png" alt="logo">
+        <img class="nome" src="./img/NOME.png" alt="nome">
+    </div>
+</body>
+
+</html>

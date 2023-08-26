@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="./imagens/LOGO.png" type="image/x-icon">
+    <title>ROLÊ É MASSA</title>
+</head>
+
+<body>
+    <div class="container">
+        <img class="lupa" src="./img/image.png" alt="lupa">
+        <p>
+            Encontre Lugares<br>
+            Incríveis para visitar<br>
+            e se divertir.
+        </p>
+        <button class="comecar-btn">Começar agora</button>
+    </div>
+
+    <script>
+        let startX = 0;
+        let endX = 0;
+
+        document.addEventListener("touchstart", (event) => {
+            startX = event.touches[0].clientX;
+        });
+
+        document.addEventListener("touchend", (event) => {
+            endX = event.changedTouches[0].clientX;
+            if (startX - endX > 50) { 
+                window.location.href = "page3.html";
+            }
+        });
+    </script>
+</body>
+
+</html>
